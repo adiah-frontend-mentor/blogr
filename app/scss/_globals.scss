@@ -1,0 +1,51 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $ubuntu;
+	font-size: $font-med;
+	font-weight: 400;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	// font-weight: 400;
+	// font-family: $overpass;
+	color: $veryDarkBlue;
+	// line-height: 1.15;
+}
+
+
+// Flexbox
+
+.flex {
+	display: flex;
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+// Buttons
+
+
+// Visibility
+// .hide-for-mobile {
+
+// }

@@ -43,7 +43,7 @@ Background gradient - body:
 ### Fonts
 
 - Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
-- Weights: 300, 600
+- Weights: 300(light), 600(semibold)
 
 - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
-- Weights: 400, 500, 700
+- Weights: 400(regular), 500(medium), 700(bold)
