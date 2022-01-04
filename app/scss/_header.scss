@@ -1,0 +1,68 @@
+.header {
+	background-image: 
+		url('../../images/bg-pattern-intro-mobile.svg'),
+		linear-gradient(to left, $redGrad2, $redGrad1);
+	// background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 36% 35%;
+	position: relative;
+	border-bottom-left-radius: 101px;
+
+	// &:after {
+	// 	content: '';
+	// 	border-bottom-left-radius: 50%;
+	// 	position: absolute;
+	// 	bottom:0;
+	// 	// height: ;
+	// 	// width: ;
+	// 	background-color:$white;
+
+	// }
+
+	nav {
+		padding: 3.5rem 1.5rem 0 1.5rem;
+		margin-bottom: 7rem;
+
+		.logo {
+			width: 5.11125rem;
+			height: 2.013125rem;
+		}
+
+		.menu {
+			// visibility: hidden;
+			display: none;
+		}
+	}
+
+	.hero {
+		text-align: center;
+		font-style: $overpass;
+		// padding: 0 2.5625rem 0 2.5625rem;
+		margin: 0 1.5rem 0 1.5rem;
+		padding-bottom: 9.75rem;
+		color: $white;
+
+		h1 {
+			font-weight: 400;
+			font-size: 2.1875rem;
+			color: $white;
+		}
+
+		p {
+			font-size: 1.1875rem;
+			font-weight: 300;
+			margin-bottom: 2.8125rem;
+		}
+
+		button {
+			border: none;
+			color: $lightRed;
+		}
+
+		button ~ button {
+			background: none;
+			color: $white;
+			border: 0.125rem solid $white;
+		}
+	}
+}

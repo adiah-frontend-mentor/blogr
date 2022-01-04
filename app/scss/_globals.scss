@@ -29,8 +29,16 @@ h1, h2, h3 {
 .flex {
 	display: flex;
 
+	&-col {
+		flex-direction: column;
+	}
+
 	&-jc-sb {
 		justify-content: space-between;
+	}
+
+	&-jc-sa {
+		justify-content: space-around;
 	}
 
 	&-jc-c {
@@ -43,6 +51,13 @@ h1, h2, h3 {
 }
 
 // Buttons
+button, .button {
+	padding: 0.9375rem 0.875rem;
+	border-radius: 23px;
+	font-style: $ubuntu;
+	font-size: 1.0625rem;
+	font-weight: 700;
+}
 
 
 // Visibility

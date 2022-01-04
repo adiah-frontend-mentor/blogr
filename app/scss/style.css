@@ -28,10 +28,22 @@ h1, h2, h3 {
   display: flex;
 }
 
+.flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .flex-jc-sb {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.flex-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .flex-jc-c {
@@ -44,5 +56,67 @@ h1, h2, h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+button, .button {
+  padding: 0.9375rem 0.875rem;
+  border-radius: 23px;
+  font-style: "Ubuntu", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.header {
+  background-image: url("../../images/bg-pattern-intro-mobile.svg"), -webkit-gradient(linear, right top, left top, from(#ff3d54), to(#ff8f70));
+  background-image: url("../../images/bg-pattern-intro-mobile.svg"), linear-gradient(to left, #ff3d54, #ff8f70);
+  background-repeat: no-repeat;
+  background-position: 36% 35%;
+  position: relative;
+  border-bottom-left-radius: 101px;
+}
+
+.header nav {
+  padding: 3.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 7rem;
+}
+
+.header nav .logo {
+  width: 5.11125rem;
+  height: 2.013125rem;
+}
+
+.header nav .menu {
+  display: none;
+}
+
+.header .hero {
+  text-align: center;
+  font-style: "Overpass", sans-serif;
+  margin: 0 1.5rem 0 1.5rem;
+  padding-bottom: 9.75rem;
+  color: white;
+}
+
+.header .hero h1 {
+  font-weight: 400;
+  font-size: 2.1875rem;
+  color: white;
+}
+
+.header .hero p {
+  font-size: 1.1875rem;
+  font-weight: 300;
+  margin-bottom: 2.8125rem;
+}
+
+.header .hero button {
+  border: none;
+  color: #ff525d;
+}
+
+.header .hero button ~ button {
+  background: none;
+  color: white;
+  border: 0.125rem solid white;
 }
 /*# sourceMappingURL=style.css.map */
