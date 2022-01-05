@@ -1,11 +1,12 @@
 .header {
+	margin: 0;
 	background-image: 
 		url('../../images/bg-pattern-intro-mobile.svg'),
 		linear-gradient(to left, $redGrad2, $redGrad1);
 	// background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 36% 35%;
-	position: relative;
+	// position: relative;
 	border-bottom-left-radius: 101px;
 
 	// &:after {
@@ -20,17 +21,109 @@
 	// }
 
 	nav {
+		position: relative;
 		padding: 3.5rem 1.5rem 0 1.5rem;
 		margin-bottom: 7rem;
 
-		.logo {
+		// .logo {
+		// 	width: 5.11125rem;
+		// 	height: 2.013125rem;
+		// }
+
+		// .menu {
+		// 	// visibility: hidden;
+		// 	display: none;
+		// }
+	}
+
+	&__logo {
+
+		img {
 			width: 5.11125rem;
 			height: 2.013125rem;
 		}
+	}
 
-		.menu {
-			// visibility: hidden;
-			display: none;
+	&__menu {
+		// display: none;
+		position: absolute;
+		top: 7.8125rem;
+		width: calc(100% - 2.875rem);
+		left: 50%;
+		transform: translateX(-50%);
+		background: $white;
+		// margin-top: 1.5rem;
+		padding: 1.625rem;
+		border-radius: 6px;
+		text-align: center;
+
+		hr {
+			margin-bottom: 2.1875rem;
+		}
+
+		.menu-item > a {
+			// position: relative;
+			display: block;
+			font-family: $overpass;
+			font-weight: 600;
+			font-size: 1.125rem;
+			// text-align: center;
+			margin-bottom: 1.8125rem;
+			text-decoration: none;
+			color: $veryDarkBlue;
+
+			span {
+				margin-left: 0.5rem;
+			}
+
+			&.expand {
+				div { // submenu
+					display: block;
+				}
+			}
+		}
+
+		button {
+			background: linear-gradient(to right, $redGrad1, $redGrad2);
+			color: $white;
+			width: 8.5625rem;
+			height: 3rem;
+			border: none;
+		}
+	}
+
+	&__submenu {
+		display: none;
+		// visibility: hidden;
+		// position: absolute;
+		padding: 1.8125rem 6rem;
+		background-color: #EFEFF1;
+		margin-bottom: 1.375rem;
+		border-radius: 4px;
+
+		a {
+			display: block;
+			font-family: $overpass;
+			font-weight: 600;
+			font-size: 1rem;
+			text-decoration: none;
+			color: $veryDarkGrayishBlue;
+
+			&:not(:last-child) {
+				margin-bottom: 1.8125rem;
+			}
+		}
+	}
+
+	.expand {
+		a > span > img {
+			// transition: rotate 300ms ease-in-out;
+			transform: rotate(180deg);
+			
+		}
+		.header__submenu {
+			// rotate the arrow
+			display: block;
 		}
 	}
 

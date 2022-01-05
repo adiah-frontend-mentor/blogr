@@ -1,3 +1,77 @@
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 200ms ease-in-out forwards;
+          animation: fade-in 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 200ms ease-in-out forwards;
+          animation: fade-out 200ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -15,6 +89,10 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -64,29 +142,101 @@ button, .button {
   font-style: "Ubuntu", sans-serif;
   font-size: 1.0625rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .header {
+  margin: 0;
   background-image: url("../../images/bg-pattern-intro-mobile.svg"), -webkit-gradient(linear, right top, left top, from(#ff3d54), to(#ff8f70));
   background-image: url("../../images/bg-pattern-intro-mobile.svg"), linear-gradient(to left, #ff3d54, #ff8f70);
   background-repeat: no-repeat;
   background-position: 36% 35%;
-  position: relative;
   border-bottom-left-radius: 101px;
 }
 
 .header nav {
+  position: relative;
   padding: 3.5rem 1.5rem 0 1.5rem;
   margin-bottom: 7rem;
 }
 
-.header nav .logo {
+.header__logo img {
   width: 5.11125rem;
   height: 2.013125rem;
 }
 
-.header nav .menu {
+.header__menu {
+  position: absolute;
+  top: 7.8125rem;
+  width: calc(100% - 2.875rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: white;
+  padding: 1.625rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.header__menu hr {
+  margin-bottom: 2.1875rem;
+}
+
+.header__menu .menu-item > a {
+  display: block;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1.8125rem;
+  text-decoration: none;
+  color: #1f3f5b;
+}
+
+.header__menu .menu-item > a span {
+  margin-left: 0.5rem;
+}
+
+.header__menu .menu-item > a.expand div {
+  display: block;
+}
+
+.header__menu button {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(to right, #ff8f70, #ff3d54);
+  color: white;
+  width: 8.5625rem;
+  height: 3rem;
+  border: none;
+}
+
+.header__submenu {
   display: none;
+  padding: 1.8125rem 6rem;
+  background-color: #EFEFF1;
+  margin-bottom: 1.375rem;
+  border-radius: 4px;
+}
+
+.header__submenu a {
+  display: block;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #4b5862;
+}
+
+.header__submenu a:not(:last-child) {
+  margin-bottom: 1.8125rem;
+}
+
+.header .expand a > span > img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header .expand .header__submenu {
+  display: block;
 }
 
 .header .hero {

@@ -13,6 +13,10 @@ body {
 	font-family: $ubuntu;
 	font-size: $font-med;
 	font-weight: 400;
+
+	&.noscroll {
+		overflow: hidden;
+	}
 }
 
 h1, h2, h3 {
@@ -57,6 +61,7 @@ button, .button {
 	font-style: $ubuntu;
 	font-size: 1.0625rem;
 	font-weight: 700;
+	cursor: pointer;
 }
 
 
