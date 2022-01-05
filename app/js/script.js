@@ -15,7 +15,7 @@ btnMenu.addEventListener('click', function(){
 	if(header.classList.contains('open')){ // Close hamburger menu
 		body.classList.remove('noscroll');
 		header.classList.remove('open');
-		btnImage.src = '../../images/icon-hamburger.svg';
+		btnImage.src = 'images/icon-hamburger.svg';
 		fadeElems.forEach(function(element){
 			element.classList.remove('fade-in');
 			element.classList.add('fade-out');
@@ -24,7 +24,7 @@ btnMenu.addEventListener('click', function(){
 	} else { // Open hamburger menu
 		body.classList.add('noscroll');
 		header.classList.add('open');
-		btnImage.src = '../../images/icon-close.svg';
+		btnImage.src = 'images/icon-close.svg';
 		fadeElems.forEach(function(element){
 			element.classList.remove('fade-out');
 			element.classList.add('fade-in');
